@@ -1,0 +1,250 @@
+.menu{
+    background: url(https://i.pinimg.com/originals/df/41/50/df41507fbda8a589250ca3cd85850797.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    width: 100vw;
+    height:100vh;
+    margin-left: -8px;
+    margin-top: -8px;
+
+}
+
+
+body {
+    background: #f47a5f;
+}
+
+
+
+
+.container{
+    width: 20%;
+}
+
+
+/* back폰트 */
+.buttons {
+    display: table-cell;
+    padding:0em;
+    padding-top: 100px;
+    font-family: 'Nanum Gothic', sans-serif;
+  
+}
+
+
+.btn-1 {
+    position: relative;
+    display: inline-block;
+    
+    color: rgb(240, 238, 238);
+    font-size: 19px;
+    line-height: 50px;
+    margin-right:0em;
+    margin-top: -4em;
+    margin-left: -7em;
+    max-width: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+/* .btn-1 {
+    letter-spacing: 0;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+} */
+
+/* 폰트 간격벌어지는거 */
+.btn-1:hover,
+.btn-1:focus,
+.btn-1:active {
+    letter-spacing: 8px;
+}
+
+/* 폰트 위아래 라인 */
+.btn-1:after,
+.btn-1:before {
+    border: 2px solid rgba(230, 229, 229, 0);
+    bottom: 0;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    /* width: 0;  */
+}
+.btn-1:hover:after,
+.btn-1:hover:before {
+    margin-left: 0em;
+    border-color: rgb(237, 236, 236);
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+
+
+         
+
+
+.gallerylist{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+ li {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+ li > a {
+    display: block;
+    width: auto;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.screen1 {
+    position: absolute;
+    top: 290px;
+    left: 570px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.screen2 {
+    position: absolute;
+    top: 300px;
+    left: 1000px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+
+
+
+ li > a .screen1 .top {
+    position: absolute;
+    bottom: 100%;
+    left: 50px;
+    z-index: 1;
+    color: rgb(102, 100, 100);
+    font-size: 38px;
+    font-weight: 800;
+    transition: all .45s;
+    font-family: 'Nanum Gothic', sans-serif;
+    
+    
+
+}
+ li > a .screen1 .bottom{
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    z-index: 1;
+    color: rgb(102, 100, 100);
+    font-size: 22px;
+    transition: all .45s;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+li > a .screen2 .top {
+    position: absolute;
+    bottom: 100%;
+    left: 50px;
+    z-index: 1;
+    color:  rgb(102, 100, 100);
+    font-size: 38px;
+    font-weight: 800;
+    transition: all .45s;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+ li > a .screen2 .bottom{
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    z-index: 1;
+    color: rgb(102, 100, 100);
+    font-size: 20px;
+    transition: all .45s;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+li > a .screen img {
+    width: 100%;
+}
+
+ 
+li > a:hover .top {bottom:52%;}
+ 
+ li > a:hover .bottom {top:52%;}
+
+
+
+
+/* 가상요소 / hover하면 회색으로 변하는 효과 */
+ li > a .screen1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all .45s;
+}
+ li > a:hover .screen1::after {
+    opacity: 0;
+}
+li > a .screen2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all .45s;
+}
+ li > a:hover .screen2::after {
+    opacity: 0;
+}
+
+
+
+
+.join {
+    font-size: 15px;
+    margin-top: 17em;
+    margin-left: -8em;
+    padding:8px 8px 8px 8px;
+    
+}
+
+#join {
+    color: rgb(77, 77, 77);
+    text-decoration: none;
+    border:1px solid rgb(228, 228, 228);
+    background-color: rgb(255, 108, 75);
+    border-radius: 2px;
+    padding:8px 8px 8px 8px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+    
+
+#log {
+    color: rgb(79, 79, 79);
+    text-decoration: none;
+    border:1px solid rgb(242, 238, 238);
+    background-color: rgb(118, 249, 181);
+    border-radius: 2px;
+    padding:8px 8px 8px 8px;
+    font-family: 'Nanum Gothic', sans-serif;
+}

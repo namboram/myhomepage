@@ -1,0 +1,126 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    
+    
+} 
+
+h1,p {
+    margin: 0;
+}
+
+a{
+    color: rgb(237, 116, 95);
+    text-decoration: none;
+    margin-left: 30em;
+    
+}
+
+body {
+    background: #3c3634;
+    
+}
+.main {
+  
+    background-size: cover;
+    background-position: center center; 
+    width: 100vw;
+    height:100vh;
+    font-family: 'Montserrat Subrayada', sans-serif; 
+    
+
+} 
+
+
+
+
+
+
+
+#contents {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    color: rgb(222, 213, 213);
+    text-align: center;
+
+   
+}
+
+#contents h1 {
+    font-size: 30px;
+    /* margin-bottom: 16px; */
+}
+
+
+
+#contents a {
+    display: inline-block;
+    border: 3px solid rgb(174, 169, 169); 
+    border-radius: 5px;
+    padding: 20px 20px 20px 20px;
+    margin-right: 30em;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.7s;
+    
+    
+}
+
+#contents a:hover {
+    background-color: mediumspringgreen;
+}
+
+@media(max-width:769px){
+    #contents h1 {
+        font-size: 30px;
+    }
+    #contents p{
+        font-size: 20px;
+    }
+    #contents a{
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+/* 타이핑 효과 */
+.wrapper {
+    height: 100vh;
+    margin-top:-75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing-demo {
+    width: 47ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+    color: rgb(58, 58, 58);
+    background-color: rgb(254, 252, 252);
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+
+
+
+  

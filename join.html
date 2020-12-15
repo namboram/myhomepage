@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="css/join.css">
+    
+</head>
+<body>
+    <div class="wrapper1">
+<div class="form-conteniar">
+    <form autocomplete="off" action="javascript:alert('회원가입 성공하셨습니다!!!'); this.memberJoinFrm.reset();" name="memberJoinFrm" >
+   
+        <div class="input">
+            <input type="text" placeholder="아이디(필수)" id="id" class="id" required>
+            
+        </div>
+      
+        <div class="input">
+            <input type="password" placeholder="비밀번호 (필수)" id="pw1" class="pw1" required>
+        </div>
+    
+        <div class="input">
+            <input type="password" placeholder="비밀번호 확인 (필수)" id="pw2" class="pw2" required>
+        </div>
+   
+        <div class="input">
+            <input type="text" placeholder="이름(필수): 한글만 입력하세요. " id="name" class="name" required>
+        </div>
+  
+        <div class="input">
+            <input type="text" placeholder="주소" id="address" class="address" >
+        </div>
+        
+        <div class="input">
+              <input class="button" type="submit" value="Join" id="btn1" onclick="save();" >
+              
+        </div>
+       
+        
+    </form>
+    
+</div>
+</div>
+
+<script>
+  
+    function save(){
+      var entry = {
+        id: $("#id").val(),
+        pw1: $("#pw1").val(),
+        pw2: $("#pw2").val(),
+        name: $("#name").val(),
+        address: $("#address").val(),
+        date: Date.now()
+      };
+      console.log(entry);
+  
+
+      //배열생성
+      var entryList = JSON.parse(localStorage.getItem("entryList"));
+      console.log(entryList);
+  
+      //첫방명록인경우
+      if(entryList == null) entryList = [];
+  
+      entryList.push(entry);//js
+      var jsonStr = JSON.stringify(entryList);//json
+      localStorage.setItem("entryList", jsonStr);//json
+  
+      //테이블 갱신
+      displayEntry();
+  
+      //초기화
+      $("#id,#pw1,#pw2,#name,#address").val('');
+    
+  
+    }
+    </script>
+
+    <!-- <script>
+
+var memberJoinFrm = document.querySelector("[name=memberJoinFrm]");
+
+
+       memberJoinFrm.onsubmit = function(){
+    //태그요소마다 유효성검사를 진행한 후, 유효하지 않으면 return false 처리
+    //아이디 검사
+    var userIdVal = id.value.trim();
+    // if(userIdVal.length < 4){
+      
+     
+      //아이디는 4글자이상 8글자 이하,시작하는 글자는 영소문자여야함.
+      if((/^\w{4,8}$/.test(userIdVal) && /^[a-z]/.test(userIdVal)) == false){
+         alert("아이디는 4글자 이상입니다. 올바른 아이디를 입력하세요!");
+      return false;
+    }
+
+        //이름 검사
+        if(/^[가-힣]{2,}$/.test(name.value) == false){
+        alert("유효한 한글이름을 입력해주세요.");
+        name.select();
+        return false;
+      }
+
+
+
+      return true;
+
+
+       }; -->
+
+
+    </script>
+  
+
+
+  
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trip</title>
+    <link rel="stylesheet" href="css/trip.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    
+    <div class="menu">
+
+  
+ 
+
+
+        
+        <!-- back버튼 -->
+     <section class="container">
+        <div class="buttons">
+        <a href="main.html" class="btn-1">&nbspBACK</a>
+        </div>
+     </section>
+        
+        
+        <!-- 영상 -->
+        <div class="inner">
+            <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                <source src="video/video.mp4" type="video/mp4">
+            
+           </video>
+            
+        <br>
+        <br>
+        <!-- 버튼 -->
+            <button id="locationBtn" onclick="btn1()">JOSHUA</button>
+            <br>
+            <button id="locationBtn2" onclick="btn2()">TREE</button>
+            <br>
+
+         
+        
+        </div> 
+    
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <!-- 스크롤 아래 -->
+
+    
+
+    <div class="slide_wrapper">
+        <ul class="slides">
+            <li><img src="img/tree1.jpg" alt="" width="300px" height="300px"></li>
+            <li><img src="img/tree2.jpg" alt="" width="300px" height="300px"></li>
+            <li><img src="img/tree3.jpg" alt="" width="300px" height="300px"></li>
+            <li><img src="img/tree4.jpg" alt="" width="300px" height="300px"></li>
+            <li><img src="img/tree5.jpg" alt="" width="300px" height="300px"></li>
+            <li><img src="img/tree7.JPG" alt="" width="300px" height="300px"></li>
+            <li><img src="img/tree6.JPG" alt="" width="300px" height="300px"></li>
+        </ul>
+    </div>
+            <p class="controls">
+                <span class="prev">prev</span>
+                <span class="next">next</span>
+            </p>
+
+
+
+    </div>
+  
+    
+
+    
+
+
+
+    <!-- 구글맵 iframe -->
+    <script type="text/javascript">
+
+        window.btn1 = function() {
+         popup = document.createElement("div");
+         iframe = document.createElement("iframe");
+         closeBtn = document.createElement("button");
+         
+       
+         iframe.src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211699.88422475586!2d-116.25357307196487!3d33.99739599167431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80da8f85b965a87b%3A0x1977eda73aeb9de2!2z7KGw7IqI7JWEIO2KuOumrCDqta3rpr3qs7Xsm5A!5e0!3m2!1sko!2skr!4v1594354874301!5m2!1sko!2skr";
+         iframe.id = "view";
+         popup.id = "popup";
+         closeBtn.id = "closeBtn";
+         closeBtn.innerHTML = "close";
+       
+         popup.appendChild(iframe);
+         popup.appendChild(closeBtn);
+         document.body.appendChild(popup);
+       
+        //창 닫기
+         closeBtn.onclick = function() {
+          document.body.removeChild(popup);
+         }
+        };
+
+      
+        window.btn2 = function() {
+            popup2 = document.createElement("div");
+            iframe2 = document.createElement("iframe");
+         closeBtn2 = document.createElement("button");
+         
+         
+         iframe2.src="https://www.google.com/maps/embed?pb=!4v1594834273333!6m8!1m7!1sCAoSLEFGMVFpcE5JaFZLblZGSFFDSXBxaWFWOFFXUHZGenpGeG96VkZhaU5JU0dK!2m2!1d33.8974143!2d-115.8599023!3f39.23713796087791!4f12.90845399120704!5f0.7820865974627469" ;
+         iframe2.id = "view2";
+         popup2.id = "popup2";
+         closeBtn2.id = "closeBtn2";
+         closeBtn2.innerHTML = "close";
+       
+         popup2.appendChild(iframe2);
+         popup2.appendChild(closeBtn2);
+         document.body.appendChild(popup2);
+       
+        //창 닫기
+         closeBtn2.onclick = function() {
+          document.body.removeChild(popup2);
+         }
+        };
+
+
+
+        //갤러리ㅡㅡㅡㅡㅡ
+        var slides = document.querySelector('.slides'),
+            slide = document.querySelectorAll('.slides li'),
+            currentIdx = 0,
+            slideCount = slide.length,
+            prevBtn = document.querySelector('.prev'),
+            slideWidth = 300,
+            slideMargin = 30,
+            nextBtn = document.querySelector('.next');
+
+            slides.style.width = (slideWidth + slideMargin)*slideCount - slideMargin +'px';
+
+            // 옆으로 옮겨지는 함수
+            function moveSlide(num) {
+                slides.style.left = -num *330 + 'px';
+                currentIdx = num;
+            }
+            //next버튼
+            nextBtn.addEventListener('click', function(){
+                if(currentIdx < slideCount -3) { //옆으로 더 안넘어가게 -3
+                moveSlide(currentIdx + 1);
+                }else {
+                    moveSlide(0);
+                }
+            });
+
+            //prev버튼
+            prevBtn.addEventListener('click', function(){
+                if(currentIdx > 0) { 
+                moveSlide(currentIdx -1);
+                }else {
+                    moveSlide(slideCount - 3);
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+       
+     
+
+
+
+        
+
+
+
+
+    
+</body>
+</html>

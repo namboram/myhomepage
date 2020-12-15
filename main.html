@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <div class="menu">
+      
+
+        
+         <div class="gallerylist">
+            <!-- back버튼 -->
+          
+            <div class="buttons">
+            <a href="index.html" class="btn-1">BACK</a>
+            
+                 
+            <div class="join">
+                <a href="#" id="join" onclick="join();">&nbspJOIN&nbsp</a>
+                <a href="#" id="log" onclick="member();">MEMBER</a>
+            </div>
+                
+
+
+            <!--투명 호버 -->
+            <li>
+                <a href="intro.html">
+                    <div class="screen1" >
+                        <div class="top">PROFILE</div>
+                        <div class="bottom"><br>
+                                            - profile<br>
+                                            - artwork<br>
+                                            - roadmap</div>
+                        <img src="img/box4.png" >
+                    </div>
+                   
+                     </a>
+            </li>
+          
+          
+            <li>
+                <a href="trip.html">
+                    <div class="screen2">
+                        <div class="top">TRAVEL</div>
+                        <div class="bottom"><br>
+                                            - U.S.A<br>
+                                            JOSHUA TREE</div>
+                        <img src="img/box4.png" >
+                    </div>
+                   
+                     </a>
+            </li>
+      
+            </div>
+        </div>
+
+        <script>
+
+            /*join*/
+            function join(){
+                window.open("join.html","join","width=550, height=600, top=50, left=100");
+               
+            }
+
+            function member(){
+                window.open("member.html","member","width=1000, height=800, top=50, left=100");
+            }
+
+
+        </script>
+
+
+
+</body>
+</html>

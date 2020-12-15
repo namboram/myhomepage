@@ -1,0 +1,369 @@
+#background{
+    width: 100vw;
+    height: 93vh;
+    
+    /* background: url(https://sothebys-com.brightspotcdn.com/dims4/default/84c3615/2147483647/strip/true/crop/2000x1535+0+0/resize/1440x1105!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2Fde%2Fcb%2F852661f64d9a819484e55b433fc9%2Fdavid.jpg) ; */
+    /* background: url(/img/back2.png); */
+    background-size: cover;
+    background-position: center center; 
+    margin-left: -10px;
+    margin-top: -55px;
+    text-align:center;
+    
+}
+body {
+    background-color: rgb(223, 207, 170);
+}
+
+/* 바깥 탭메뉴 */
+.tab_content{
+margin-top: 76px;  
+}
+
+
+/* back폰트 */
+.buttons {
+    display: table-cell;
+    padding:0em;
+    padding-top: 90px;
+    /* text-align: left; */
+    /* vertical-align: left; */
+}
+
+[class*="btn-"] {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    color: rgb(237, 235, 223);
+    font-size: 19px;
+    line-height: 50px;
+    /* margin-right:0em; */
+    margin-top: -10em;
+    margin-left: 5em;
+    max-width: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.btn-1 {
+    letter-spacing: 0;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+}
+
+/* 폰트 간격벌어지는거 */
+.btn-1:hover,
+.btn-1:focus,
+.btn-1:active {
+    letter-spacing: 8px;
+}
+
+/* 폰트 위아래 라인 */
+.btn-1:after,
+.btn-1:before {
+    border: 2px solid rgba(237, 235, 223,0);
+    bottom: 0;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all .28s ease-in-out;
+    transition: all .28s ease-in-out;
+    width: 0;
+}
+.btn-1:hover:after,
+.btn-1:hover:before {
+    border-color: #fff;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 80%;
+}
+
+
+
+
+
+
+
+#lab1{
+    
+    font-size: 25px;
+    display: inline;
+    font-family: 'Shadows Into Light', cursive;
+ 
+}
+#lab2{
+    font-size: 25px;
+    display: inline;
+    font-family: 'Shadows Into Light', cursive;
+ 
+}
+#lab3{
+    font-size: 25px;
+    display: inline;
+    font-family: 'Shadows Into Light', cursive;
+ 
+}
+
+
+
+/* 바깥 탭 */
+input[type="radio"] {display: none;}
+input[id="tab01"] + label {display:inline-block; height: 1px; padding:10px;background: rgb(237, 235, 223);cursor: pointer;border-radius: 30px;border: 4px solid rgb(237, 235, 223);}
+input[id="tab02"] + label {display:inline-block; height: 1px; padding:10px;background: rgb(237, 235, 223);cursor: pointer;border-radius: 30px;border: 4px solid rgb(237, 235, 223);}
+input[id="tab03"] + label {display:inline-block; height: 1px; padding:10px;background: rgb(237, 235, 223);cursor: pointer;border-radius: 30px;border: 4px solid rgb(237, 235, 223);}
+/* input[type="radio"] + label {display:inline-block; height: 1px; ;padding:30px;background: #ccc;color:#999;font-size: 15px;cursor: pointer;} */
+input[type="radio"]:checked + label {background:rgb(216, 213, 196);color: rgb(69, 69, 69); padding: 20px;}
+
+.conbox {width:1150px;height:730px;background:rgb(216, 213, 196);margin:0 auto;margin-top: -5em; padding: 50px; display: none; border-radius:1%; border:3px solid rgb(237, 235, 223);}
+input[id="tab01"]:checked ~ .con1 {display: block;}
+input[id="tab02"]:checked ~ .con2 {display: block;}
+input[id="tab03"]:checked ~ .con3 {display: block;}
+
+
+
+
+/* info 속에 탭 */
+#img_content{
+    background  : lightgray;
+    width: 700px;
+    height: 470px;
+    margin: 0px auto;
+    
+    border-radius: 10px;
+    border: 15px rgb(205, 200, 189) solid;
+    box-shadow: 0 0 100px gray;
+}
+
+
+
+
+/* 버튼 */
+input[type='radio']{
+    display: none;
+}
+
+input[type='radio']:checked + label {
+    background: rgb(237, 211, 167);
+    width: 10px;
+}
+
+
+label{
+    background: rgb(145, 141, 127);
+    display: block;
+    width: 30px;
+    height: 20px;
+    margin-bottom: 10px;
+    transition: 1s;
+    cursor: pointer;
+    
+}
+
+/* img영역 */
+#img_content #imgbox{
+    width: 540px;
+    height: 480px;
+    float: right;
+    border-radius: 10px;
+    margin-top: -100px;
+    position: relative;
+}
+
+#img_content{
+    background: rgb(172, 172, 164);
+    width: 600px;
+    height: 550px;
+    margin: 10px auto;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 100px gray;
+    overflow: hidden;
+}
+
+.select_img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 2%;
+    border: 10px solid rgb(205, 200, 189);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+/* label클릭시 이미지 나타내기 */
+input[id="select_box1"]:checked ~ #imgbox .select1 img{
+    opacity: 1;
+}
+input[id="select_box2"]:checked ~ #imgbox .select2 img{
+    opacity: 1;
+}
+input[id="select_box3"]:checked ~ #imgbox .select3 img{
+    opacity: 1;
+}
+
+
+/* 첫번째 label위치 이동 -첫번째 label에만 margin속성을 주기 위해 :nth-of-type()을 사용함 */
+#img_content label:nth-child(1){
+    margin-top: 20px;
+}
+
+/* 프로필 폰트*/
+#info{
+  
+    color: rgba(245, 241, 241, 0.822);
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 21px;
+ 
+}
+
+
+/* 소셜 버튼 */
+.fa {
+padding: 10px;
+font-size: 20px;
+width: 20px;
+text-align: center;
+text-decoration: none;
+margin: 0 2px;
+border-radius: 100%;
+}
+.fa-youtube {
+background: #bb0000;
+color: white;
+}
+
+.fa-instagram {
+background: #ee6353;
+color: white;
+}
+
+
+
+
+.image1 {
+    
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+}
+.image2 {
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+}
+.image3 {
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+}
+.image4 {
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+}
+.image5 {
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+}
+.image6 {
+    width: 350px;
+    padding: 5px;
+    margin: 10px;
+}
+
+
+
+#artworkInfo {
+    text-align: center;
+    color :rgb(233, 233, 220);
+    
+    font-size: 30px;
+    padding: 0px;
+    /* font-family: 'Cedarville Cursive', cursive; */
+    
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+
+
+
+/* 로드맵 */
+
+        /* 버튼역할 */
+        .menu {
+                width: 300px;
+                height: 30px;
+                background: rgb(206, 213, 193);
+                color: rgb(148, 146, 146);
+                border-radius: 10px;
+                text-align: center;
+                border: 3px solid rgb(171, 171, 171);
+                cursor: pointer;
+                margin-left: 21em;
+                margin-bottom: 15px;
+           
+            }
+            /* 상자 */
+            .content{
+                border: 5px solid rgb(181, 179, 179);
+                width: 620px;
+                height: 550px;
+                display: none;
+                border-radius: 30px;
+                margin-left: 16em;
+
+            }
+
+            #fe {
+                font-size: 20px;
+                font-weight: 500;
+                padding-top: 10px;
+             
+            }
+
+            #be { 
+                font-size: 20px;
+                font-weight: 500;
+                padding-top: 10px;
+            }
+            
+
+
+            /* 상자 속에 폰트*/
+            ul {
+                color: rgb(68, 68, 68);
+                text-align: center;
+                list-style: none;
+                font-size: 20px;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-weight: 500;
+                
+            }
+
+     
+            ul > p {
+                color: rgb(237, 237, 237);
+                font-size: 22px;
+                font-weight: 400px;
+                margin-left:-25px;
+
+            }
+
+            ul > li {
+                margin-left:-30px;
+            }
+
+            ul > li:hover {
+                color: rgb(136, 247, 153);
+                font-size: 25px;
+                font-weight: 750;
+                
+                
+            }
